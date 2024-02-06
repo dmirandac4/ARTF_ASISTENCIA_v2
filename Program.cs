@@ -8,6 +8,7 @@ namespace ARTF_ASISTENCIA_v2
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+            builder.Services.AddRazorPages();
 
             var app = builder.Build();
 
