@@ -1,0 +1,59 @@
+﻿@model IEnumerable<ARTF_ASISTENCIA_v2.Models.Asistencium>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.HrfhIng)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HrfhSal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Observaciones)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Justificaciones)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Numemp)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.HrfhIng)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HrfhSal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Observaciones)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Justificaciones)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Numemp)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.DiaReg">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.DiaReg">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.DiaReg">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

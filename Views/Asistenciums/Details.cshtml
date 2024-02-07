@@ -1,0 +1,48 @@
+﻿@model ARTF_ASISTENCIA_v2.Models.Asistencium
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Asistencium</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HrfhIng)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HrfhIng)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HrfhSal)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HrfhSal)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Observaciones)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Observaciones)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Justificaciones)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Justificaciones)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Numemp)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Numemp)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.DiaReg">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
