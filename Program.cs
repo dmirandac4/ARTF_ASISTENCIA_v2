@@ -1,3 +1,6 @@
+using ARTF_ASISTENCIA_v2.Models;
+using Microsoft.EntityFrameworkCore;
+
 namespace ARTF_ASISTENCIA_v2
 {
     public class Program
@@ -8,7 +11,8 @@ namespace ARTF_ASISTENCIA_v2
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
-            builder.Services.AddRazorPages();
+            builder.Services.AddDbContext<BaseasistenciaContext>(options =>
+            options.UseMySql(builder.Configuration.GetConnectionString("conexion"), Microsoft.EntityFrameworkCore.ServerVersion.Parse("8.0.31-mysql")));
 
             var app = builder.Build();
 
